@@ -1,0 +1,4 @@
+#Sun May 19 14:33:48 IST 2019
+base.0=/home/it/HSENGIV/CROON-ANDROID/platforms/android/app/build/intermediates/transforms/dex/release/0
+renamed.0=classes.dex
+file.0=/home/it/HSENGIV/CROON-ANDROID/platforms/android/app/build/intermediates/transforms/dex/release/0/classes.dex

@@ -1,0 +1,91 @@
+<ion-header> 
+  <ion-toolbar color="dark-blue">
+    <span>
+      <button menuToggle ion-button icon-only clear>
+        <ion-icon name="md-menu"></ion-icon>
+      </button>
+    </span>
+    <img src="assets/imgs/header-logo.png">
+    <span>
+      <button ion-button icon-only (click)="notification()" clear>
+        <ion-icon name="ios-notifications-outline"></ion-icon>
+         <span class="notify" *ngIf="notify_count!=0" [hidden]="notify_count==undefined">{{notify_count}}</span>
+      </button>     
+    </span>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+    <div class="subheader">
+      <h3>Current Standings</h3>
+      <ion-icon name="search" (click)="toggle()"></ion-icon>
+    </div> 
+    <ion-toolbar class="segment" *ngIf="types?.length!=0">
+      <ion-segment  [(ngModel)]="selectedSegment"  (ionChange)="onSegmentChanged($event)">   
+          <ion-segment-button *ngFor="let slide of types; let i = index" (click)="genreClick(slide,i)" value="{{slide.genre_type}}">
+            {{slide.genre_type}}
+          </ion-segment-button> 
+      </ion-segment>
+    </ion-toolbar>
+   <!--  <div #panel style="overflow-y:scroll; height: 20px;" >
+      <div *ngFor="let log of arr; let i = index" innerHTML="{{log}}" [id]="i"></div>
+    </div>
+    <button (click)="onPreviousSearchPosition()">Previous</button>
+    <button (click)="onNextSearchPosition()">Next</button> -->
+    <div class="no_matches" *ngIf="inScreenLoader && types?.length==0 || inScreenLoader && types?.length==undefined">
+      <img src="assets/imgs/rotating-ring-loader.gif">
+    </div> 
+  <ion-slides #mySlider (ionSlideDidChange)="onSlideChanged($event)">
+    <ion-slide  *ngFor="let slide of types">
+        
+        <div class="no_matches" *ngIf="inScreenLoader">
+            <img src="assets/imgs/rotating-ring-loader.gif">
+        </div>
+
+        <div class="slider-container" *ngIf="network_status == 2">
+            <div class="user_list" *ngFor="let user of setGenre; let i = index">
+              <button ion-item (click)="openModal(user.id,user.rank)">
+                  <ion-avatar item-start>
+                  <img src="assets/imgs/contactIcon.png" *ngIf="user.user.image.length==0 || user.user.image[0].image_path.url==null">
+                  <img src="{{user.user.image[0].image_path.url}}" *ngIf="user.user.image.length!=0 && user.user.image[0].image_path.url!=null">
+                  </ion-avatar>
+                  <h2>{{user.title }}</h2>
+                  <p><span><ion-icon name="ios-person-outline"></ion-icon>{{user.user.first_name}}</span><span><ion-icon name="ios-star-outline"></ion-icon>{{user.votes.length}} votes</span><span><ion-icon name="ios-trophy-outline"></ion-icon>Rank {{user.rank}}</span></p>
+              </button>
+              <button ion-button icon-only clear class="btn-action" (click)="openModal(user.id,user.rank)">
+                  <ion-icon name="ios-arrow-forward"></ion-icon>
+              </button>
+            </div>
+            <div class="no_matches" *ngIf="(setGenre).length==0 && network_status == 2 && !inScreenLoader">
+              <img src="assets/imgs/myupload.png">
+              <h5>No Records Found</h5>
+            </div>
+        </div>
+        <div class="no_internet slider-container" *ngIf="network_status == 1 && !inScreenLoader">
+            <img src="assets/imgs/no_internet.png">
+            <h5>Oops!!</h5>
+            <p> Sorry, we can’t reach the server,<br> Please check your internet connection</p>
+            <button ion-button color="light" round item-end icon-start (click)="Network()">
+                <ion-icon name="refresh"></ion-icon> Try again
+            </button>
+        </div>        
+        
+        
+     <div *ngIf="ID == slide.id && setGenre.length == count_list"> 
+        <ion-infinite-scroll (ionInfinite)="doInfinite($event)">
+          <ion-infinite-scroll-content  loadingSpinner="bubbles" loadingText="Loading more data...">  
+          </ion-infinite-scroll-content>
+        </ion-infinite-scroll>
+     </div> 
+
+    </ion-slide>
+    <div class="no_internet1" *ngIf="network_status == 1 && types?.length == 0 && setGenre.length == 0 && !inScreenLoader">
+            <img src="assets/imgs/no_internet.png">
+            <h5>Oops!!</h5>
+            <p> Sorry, we can’t reach the server,<br> Please check your internet connection</p>
+            <button ion-button color="light" round item-end icon-start (click)="Network('Music')">
+                <ion-icon name="refresh"></ion-icon> Try again
+            </button>
+    </div> 
+  </ion-slides>
+</ion-content>
+

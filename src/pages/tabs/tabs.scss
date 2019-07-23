@@ -1,0 +1,23 @@
+page-tabs {	
+    .tab-button-text {
+    	font-size: 1.2rem;
+	    font-weight: 300;
+	    margin-top: 0;
+	    margin-bottom: 1px;
+	    min-height: 11px;
+	    color: white;
+    }    
+    .tab-button{
+        min-height: 5.6rem !important;
+    	background-color:#002b3d;
+    }
+	.tabs-md .tab-button[aria-selected=true], .tabs-ios .tab-button[aria-selected=true] {
+		    background-color: #075567;
+	}	
+	.tabs-md .tab-button[aria-selected="true"] .tab-button-icon, .tabs-ios .tab-button[aria-selected="true"] .tab-button-icon {
+	    color: #fcc52a;
+    }
+    .tabs-md .tab-button-icon, .tabs-ios .tab-button-icon {    
+    	color: #fcc52a;
+    }
+ }

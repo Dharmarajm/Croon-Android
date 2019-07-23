@@ -1,0 +1,86 @@
+page-menu {
+
+	.menu-profile-pic{
+		text-align: center;
+		position:relative;
+		margin: 0 auto;
+		padding: 30px 20px;
+	}
+	.menu-profile-pic img{
+		border-radius: 50%;
+		height: 100px !important;
+		width: 100px !important;
+		border: 4px solid #0f5466;
+		object-fit: cover;
+		padding: 0;
+	}
+	.menu-profile-pic h4{
+		margin: 10px 0 0;
+		font-size: 1.7rem;
+		font-weight: 300;
+		color:#fff;
+	}
+    .menu-inner .content-md, .menu-inner .content-ios{
+    	background-color: transparent;
+    }
+    .menu-inner{
+    	background-color: rgba(13, 70, 84, 0.95) !important;
+    }
+    .menu-inner ion-item-group{
+    	margin-bottom: 15px;
+    }
+	.menu-inner ion-item-group .item-block .item-inner {
+	    margin-right: 16px;
+	    border-bottom: 1px solid #13333a;
+	}
+	.menu-inner ion-item-group .item-block:last-child .item-inner{
+		border-bottom:0;
+	}
+	.menu-inner ion-item-group .item-block ion-icon{
+		margin-right:10px;
+	}
+	.menu-inner ion-item-group .item-block ion-icon.icon-md-primary,.menu-inner ion-item-group .item-block ion-icon.icon-ios-primary {
+	    color: #fdc628;
+	}
+	.menu-inner ion-item-group .item-block{
+		background-color:transparent;
+		color:#fff;
+		font-size: 1.4rem;
+    	font-weight: 300;
+	}
+	.menu-inner .item-md-light, .menu-inner .item-divider-md-light, .menu-inner .item-ios-light, .menu-inner .item-divider-ios-light {
+	    color: #fdc628;
+	    background-color: #083338;
+	    border:none;
+	}
+	.menu-inner ion-label {
+	    margin: 8px 8px 8px 0;
+	}
+	.menu-inner .label-ios {
+	    font-size: 1.4rem;
+	}
+	.badge-md, .badge-ios {
+	    border-radius: 4px;
+	    color: #fdc628;
+	    background-color: transparent;
+	    font-size: 1.2rem;
+	    font-weight: 300;
+	}
+	.menu-login, .menu-login.activated{
+	    background-color: transparent;
+	    color: #fff;
+	    padding-top: 50px;
+	    padding-bottom: 50px;
+	}
+	.menu-login .item-inner{
+		border-bottom:0px !important;
+	}
+	.menu-login h2{
+		margin-bottom: 5px;
+	}
+	.menu-login p{
+	    color: rgba(255, 255, 255, 0.7);
+	    font-size: 1.2rem;
+	    font-weight: 300;
+	}
+}

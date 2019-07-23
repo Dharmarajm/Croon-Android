@@ -1,0 +1,60 @@
+<ion-content class="back_content">
+
+   <!--  <button ion-button icon-only clear (click)="closeModal()">
+      <ion-icon name="ios-arrow-round-back" style="margin-top: 15px;color:white"></ion-icon>
+    </button> -->
+
+    <p class="timer">{{time}}</p>
+
+   <!--  <br><br><br><br><br><br><br><br><br><br>
+
+    <div class="row row-center" (click)="start()" *ngIf="show == 3" >
+        <div class="col text-center" >
+            <img alt="Logo" height="100" src="assets/imgs/record_button.png">
+        </div>
+    </div> -->
+
+  <!--   <br><br>
+	<button ion-button primary *ngIf="show == 1" (click)="stop()">stop</button>
+	<button ion-button primary *ngIf="show == 2" (click)="conform()">conform</button> -->
+  <div class="row" style="margin-top: 75% !important;margin-left: 20px;">
+      <div class="btn-label" id="upload_record" >
+        <button ion-button icon-only [disabled]="!isenabled" (click)="start()">
+          <ion-icon name="ios-mic-outline" *ngIf="!Pause"></ion-icon> 
+          <ion-icon name="ios-pause-outline" *ngIf="Pause"></ion-icon>
+        </button>
+        <p *ngIf="!Pause">Record</p>
+        <p *ngIf="Pause">Pause</p>
+      </div>
+
+      <div class="btn-label" id="upload_record" >
+        <button ion-button icon-only style="font-size: 13px;background: #ece2e2de;color: black;" [disabled]="!Stop" (click)="stop()">
+           <ion-icon name="square-outline"></ion-icon>
+          <!-- <ion-icon name="mic"></ion-icon> -->
+        </button>
+        <p>Stop</p>
+      </div>
+
+      <div class="btn-label" id="upload_record" (click)="confirm()">
+        <button ion-button icon-only [disabled]="isenabled">
+          <ion-icon name="ios-checkmark-circle-outline"></ion-icon>
+        </button>
+        <p>Confirm</p>
+      </div>
+  </div>
+  <!-- <button ion-button primary (click)="playAudio(fileName)">play</button>
+  <ion-card>
+    <ion-card-content>
+      <ion-card-title>
+        <button ion-button primary (click)="stopRecord()" *ngIf="recording"><ion-icon name="mic-off"></ion-icon>&nbsp;&nbsp;Stop Record</button>
+        <button ion-button primary (click)="startRecord()" *ngIf="!recording"><ion-icon name="mic"></ion-icon>&nbsp;&nbsp;Start Record</button>
+      </ion-card-title>
+    </ion-card-content>
+  </ion-card>
+  <ion-list>
+    <ion-item *ngFor="let audio of audioList; index as i;">
+      <p>{{audio.filename}}</p>
+      <button ion-button clear item-end large (click)="playAudio(audio.filename, i)"><ion-icon name="play"></ion-icon></button>
+    </ion-item>
+  </ion-list> -->
+</ion-content> 

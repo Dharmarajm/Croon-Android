@@ -1,0 +1,31 @@
+<ion-content class="ion-content">
+  <div class="header">
+    <span>
+      <button ion-button icon-only clear id="signup_back_button" (click)="back()">
+       <ion-icon name="ios-arrow-back"></ion-icon>
+      </button>
+      <h4>Signup</h4>
+    </span>
+    <img src="assets/imgs/logo.png">
+  </div>
+  <form class="login-form">
+    <ion-item>
+      <ion-label floating>Email</ion-label>
+      <ion-input type="email" id="signup_emailid" #myInput [(ngModel)]="signup.emailid" [ngModelOptions]="{standalone: true}" autofocus></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label floating>Password</ion-label>
+      <ion-input type="password" minlength="5" maxlength="10" id="signup_password" [(ngModel)]="signup.password" [ngModelOptions]="{standalone: true}"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label floating>Confirm Password</ion-label>
+      <ion-input type="password" id="signup_confirm_password" [(ngModel)]="signup.confrim" [ngModelOptions]="{standalone: true}"></ion-input>
+    </ion-item>
+    <br>
+
+    <button ion-button block id="signup_save_button" (click)="gotologin()">Next</button> 
+   
+</form>
+</ion-content>

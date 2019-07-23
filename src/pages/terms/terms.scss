@@ -1,0 +1,110 @@
+page-terms {
+	.ion-content {
+	    background: url("../assets/imgs/bg.jpg") no-repeat center center fixed; 	  
+     }
+     .header{
+     	display:flex;
+     	align-items:center;
+     	justify-content:space-between;
+     	padding:30px 20px 30px 8px;
+     }
+     .header span{
+     	display:inline-flex;
+     	align-items:center;
+     }
+     .header span h4{
+     	margin:0px;
+     	color:#fff;
+     	font-weight:300;
+     }
+     .header span .button-clear{
+     	color:#fff;
+     }
+     .header img{
+     	width:100px;
+     }
+    .images_logo{
+    	text-align:center;
+    	padding: 40px 75px 0px;
+    }
+	.button-default {
+	    background-color: #0c5466;
+	    font-weight: 500;
+	    letter-spacing: 1px;
+	    border-radius: 4px;
+	    height: 3.2rem;
+	    color: #fff;
+	}
+	.button-default.activated, .button-default:hover:not(.disable-hover){
+		background-color: #0c5466;
+	}
+	.button-clear-md, .button-clear-ios{
+	 	color: #c7c9cd;
+	 	font-weight: 300;
+	}
+	.terms-conditions{
+		background-color:transparent;
+		margin-top: -15px;
+		padding: 5px 20px 10px;
+		height: calc(100% - 210px);
+		overflow: auto;
+		font-size:1.2rem;
+		color:#fff;
+		line-height:2;
+		font-weight:400;
+		text-align:justify;
+	}
+	.terms-conditions h4{
+		font-size:1.6rem;
+		line-height:2;
+	}
+	.terms-conditions h4:first-child{
+		margin-top:0px;
+	}
+	.terms-conditions a{
+		color: #fcc62b;
+	}
+	.terms-conditions .item {
+		border-top: 0.5px solid #ddd;
+	    margin-top: 20px;
+	    background-color:transparent;
+	}
+	.item-block .item-inner{
+		border:none !important;
+		color:#fff;
+		font-size:1.5rem;
+		font-weight: 500;
+	}
+	.item.item-md .checkbox-md, .item.item-ios .checkbox-ios{
+		margin: 9px 9px 9px 4px;
+	}
+	.item-checkbox .item-inner {
+	    border-bottom: none !important;
+	}
+	.checkbox-md .checkbox-icon, .checkbox-ios .checkbox-icon {
+	    border-radius: 1px;
+	    border-color: #cccccb;
+	    background-color: transparent;
+	}
+	.item.item-checkbox{
+	    font-size: 14px;
+	    font-weight: 300;
+	    color: #c7c9cd;
+	    padding: 0;
+	    background-color: transparent;
+	}
+	.item .checkbox-md , .item .checkbox-ios {
+	    margin: 9px 10px 9px 4px !important;
+	}
+	.checkbox-md .checkbox-checked .checkbox-inner, .checkbox-ios .checkbox-checked .checkbox-inner {
+	    border-color: #fdc629;
+	}
+	.terms_cond {
+	    position: fixed;
+	    bottom: 0;
+	    padding: 0 20px 10px;
+	    width: 100%;
+	}
+}
+
+

@@ -1,0 +1,90 @@
+page-search {
+
+	.searchbar-md .searchbar-search-icon, .searchbar-md .searchbar-md-cancel {
+	    color: #002c3d;
+	}
+	.list-ios .item-block .item-inner, .list-md .item-block .item-inner {
+	    border-bottom: 1px solid #e9e9e9;
+	}
+	.list-ios .user_list:last-child .item-block .item-inner, .list-md .user_list:last-child .item-block .item-inner {
+	    border-bottom: 0px;
+	}
+	.list-ios .item-block, .list-ios .item-wrapper .item-block, .list-md .item-block, .list-md .item-wrapper .item-block {
+	    border-bottom: 0px solid #d2d2d2;
+	}
+	.user_list .item-md.item-block .item-inner, .user_list .item-ios.item-block .item-inner {
+	    padding-right: 8px;
+	}
+	.searchgroup{
+		display: flex;
+		align-items: center;
+		width: 100%;
+	}
+	.searchgroup button{
+		padding: 0;
+		height: auto;
+	}
+	.searchinput{
+		width: 100%;
+		border: 0;
+		border-radius: 5px;
+		padding: 6px 10px 6px 30px;
+		color: #fff;
+		background-color: rgba(255, 255, 255, 0.08);
+		margin: 7px 10px 7px 0px;
+		background-image: url("data:image/svg+xml;charset=utf-8,<svg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2013%2013'><path%20fill='rgba(255,%20255,%20255,%200.5)'%20d='M5,1c2.2,0,4,1.8,4,4S7.2,9,5,9S1,7.2,1,5S2.8,1,5,1%20M5,0C2.2,0,0,2.2,0,5s2.2,5,5,5s5-2.2,5-5S7.8,0,5,0%20L5,0z'/><line%20stroke='rgba(255,%20255,%20255,%200.5)'%20stroke-miterlimit='10'%20x1='12.6'%20y1='12.6'%20x2='8.2'%20y2='8.2'/></svg>");
+		background-repeat: no-repeat;
+		background-size: 14px;
+		background-position: 8px;
+	}
+	.searchinput .text-input-md, .searchinput .text-input-ios {
+    	margin: 3px 8px !important;
+    }
+    .search_list button{
+    	padding:0px;
+    	min-height: unset;
+    }
+    .search_list .item-inner{
+    	padding:0 10px;
+    }
+    .search_list .label-md, .search_list .label-ios {
+    	margin: 8px 0;
+    	padding-right: 20px;
+    	position:relative;
+	}
+	.search_list ion-label h2 {
+	    font-size: 1.5rem;
+	    font-weight: 400;
+	    color: #302d2d;
+	    overflow: hidden;
+	    text-overflow: ellipsis;
+	    white-space: nowrap;
+	}
+	.search_list ion-label h2 ion-icon {
+	    position: absolute;
+	    right: 2px;
+	    color: #000;
+	    opacity: 0.3;
+	}
+	.find_favourite, .no_matches{
+	    text-align: center;
+	    padding: 50px 10px;
+	    color: #aaaaaa;
+	}
+	.find_favourite img{
+	    width: 75px;
+	    margin-right: 12px;
+	}
+	.find_favourite p, .no_matches p{
+		margin:0px;
+	}
+	.find_favourite h5{
+		margin-bottom: 5px;
+	}
+	.no_matches h5{
+		margin:0px 0px 5px;
+	}
+	.no_matches img{
+	    width: 75px;
+	}
+}

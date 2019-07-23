@@ -1,0 +1,285 @@
+// http://ionicframework.com/docs/theming/
+
+
+// App Global Sass
+// --------------------------------------------------
+// Put style rules here that you want to apply globally. These
+// styles are for the entire app and not just one component.
+// Additionally, this file can be also used as an entry point
+// to import other Sass files to be included in the output CSS.
+//
+// Shared Sass variables, which can be used to adjust Ionic's
+// default Sass variables, belong in "theme/variables.scss".
+//
+// To declare rules for a specific mode, create a child rule
+// for the .md, .ios, or .wp mode classes. The mode class is
+// automatically applied to the <body> element in the app.
+
+
+//@import "../theme/icons"
+
+
+    .toolbar-content {
+	    text-align: center;
+	    display: flex;
+	    align-items: flex-end;
+	    justify-content:space-between;
+	}
+	.header button{
+		color:#fff;
+	}
+	.header img{
+	    width: 115px;
+	    padding: 5px 0;
+	}
+	.toolbar-content span:last-child .button[icon-only] {
+	    padding: 0;
+	    min-width: .9em;
+	    width: 25px;
+	    height: 25px;
+	}
+	.toolbar-content span:last-child{
+	    padding-right:10px;
+	}
+	.subheader{
+	    display: flex;
+	    align-items: center;
+	    justify-content: space-between;
+	    padding: 0 20px;
+	}
+	.subheader h3{
+		font-weight:300;
+		color:#231f20;
+	}
+	.subheader ion-icon{
+		font-size: 28px;
+		color:#002b3d;
+		margin-top: 10px;
+	}
+	.segment{
+		position:sticky;
+		top:0;
+	}
+	.toolbar-md.segment{
+		padding:0;
+		min-height: auto;
+	}
+	.segment-ios, .segment-md {
+	    background-color: #f1f4f5;
+	    height: fit-content;
+	}
+	.toolbar-ios .segment-button {
+	    max-width: none;
+	}
+	.segment .toolbar-background-md {
+	    border-color: transparent;
+	    background: none;
+	}
+	.segment-ios .segment-button:first-of-type, .segment-ios .segment-button:last-of-type {
+	    border-top-left-radius: 0px;
+	    border-top-right-radius: 0;
+	    border-bottom-right-radius: 0;
+	    border-bottom-left-radius: 0px;
+	    margin-right: 0;
+	}	
+	.segment-md .segment-button, .segment-ios .segment-button {
+	    height: 4.2rem;
+	    border:none;
+	    border-bottom-width: 2px;
+	    border-bottom-style: solid;
+	    border-bottom-color: rgba(0, 0, 0, 0);
+	    font-size: 1.6rem;
+	    font-weight: 900;
+	    line-height: 4rem;
+	    color: #002b3d;
+	    opacity: 0.7;
+	    background-color: transparent;
+	    text-transform:uppercase;
+	}
+	.segment-md .segment-button.activated, .segment-md .segment-button.segment-activated, .segment-ios .segment-button.activated, .segment-ios .segment-button.segment-activated {
+	    border-color: #fdc72b;
+	    opacity: 1;
+	    background:none;
+	    color: #002b3d;
+	}
+	.segment-ios .segment-button:hover:not(.segment-activated) {
+	    background-color: rgba(72, 138, 255, 0);
+	}
+	 .item-ios ion-avatar[item-start],  .item-md ion-avatar[item-start]{
+    	margin: 8px 10px 8px 0px;
+	}
+	.item-ios ion-avatar ion-img, .item-ios ion-avatar img, .item-md ion-avatar ion-img, .item-md ion-avatar img {
+	    object-fit: cover;
+	    height:45px;
+	    width:45px;
+	}
+	.list-ios .item-block .item-inner, .list-md .item-block .item-inner {
+	    border-bottom: 0px;
+	}
+	.list-ios .item-block, .list-ios .item-wrapper .item-block, .list-md .item-block, .list-md .item-wrapper .item-block {
+	    border-bottom: 1px solid #d2d2d2;
+	}
+	.list-ios .user_list:last-child .item-block, .list-md .user_list:last-child .item-block {
+	    border-bottom: 0px;
+	}
+	.user_list{
+		position:relative;
+	}
+	.user_list ion-label button ion-icon{
+		font-size:26px;
+	}
+	.user_list .item-md.item-block .item-inner, .user_list .item-ios.item-block .item-inner {
+	    padding-right: 50px;
+	}
+	.user_list ion-label h2{
+		font-size: 1.5rem;
+	    font-weight: 600;
+	    color: #313135;
+	    overflow: hidden;
+	    text-overflow: ellipsis;
+	    white-space: nowrap;
+	}
+	.user_list ion-label p{
+		font-size: 1.2rem;
+	    color: #878686;
+	}
+	.user_list ion-label p span{
+		margin-right:10px;
+	}
+	.user_list ion-label p span ion-icon{
+		margin-right:5px;
+		color:#002b3d;
+	}
+	.user_list .btn-action{
+	    position: absolute;
+	    right: 8px;
+	    top: 5%;
+	    color: #002b3d;
+	    width: 40px;
+	    height: 50px;
+	    font-size: 1.4rem;
+	}
+	.notify{
+	    padding: 0 !important;
+		height:14px;
+		width:14px;
+		font-size:8px;
+		display: flex;
+		justify-content:center;
+		align-items:center;
+		background-color:#fdc628;
+		color:#002b3d;
+		border-radius:50%;
+		position:absolute;
+		top:0px;
+		right:0px;
+	}
+	.searchbar-md-cancel ion-icon{
+		margin-top:0px;
+		font-size:24px;
+	}
+	.searchbar-md {
+		padding: 0px;
+		position:sticky;
+		top:0;
+		z-index:12;
+	}
+	.searchbar-ios {
+	    position:sticky;
+	    top:0;
+	    z-index:12;
+	    border-bottom: 0.5px solid rgba(0, 0, 0, 0.1);
+	    background: rgb(255, 255, 255);
+	}
+	.searchbar-ios .button-clear-ios {
+	    color: #4b4b4b;
+	}
+	.item-ios[detail-push] .item-inner, button.item-ios:not([detail-none]) .item-inner, a.item-ios:not([detail-none]) .item-inner {
+	    background: none;
+	    padding-right: 0px;
+	}
+	ion-icon.tab-button-icon.icon.icon-md.ion-ios-log-out-outline, ion-icon.tab-button-icon.icon.icon-ios.ion-ios-log-out-outline {
+	    transform: rotate(-90deg);
+	    transform-origin: 50% 50%;
+	}
+	ion-icon.icon.ion-ios-log-out-outline.item-icon{
+	    transform: rotate(-90deg);
+	}
+	ion-note {
+		font-size: 11px;
+		align-self: flex-start;
+		margin-top: 14px;
+	}
+	.no_data{
+		text-align:center;
+		padding:50px 0px;
+		color: #7d7777;
+	}
+	.no_data img{
+		width:40%;
+	}
+	.no_data h3{
+		color:#bebebe;
+		font-weight:400;
+		font-size:1.8rem;
+		line-height: 24px;
+	}
+	.sign-in{
+		padding:20px;
+		text-align:center;
+	}
+	.no_internet{
+	    text-align: center;
+	    padding: 50px 10px;
+	    color: #aaaaaa;
+	}
+	.no_internet img{
+	    width: 100px;
+	}
+	.no_internet p{
+		margin:0px 0 10px;
+	}
+	.no_internet .button-md-light, .no_internet .button-ios-light, .no_internet .button-default.activated {
+	    color: #fff;
+	    background-color: #9eaeb5;
+	    text-transform: capitalize;
+	    padding: 0 1.6rem;
+	    height: 2.6rem;
+	    font-size: 1rem;
+	}
+
+   .no_internet1{
+	    text-align: center;
+	    padding: 50px 10px;
+	    color: #aaaaaa;
+	    width: 100%;
+	}
+	.no_internet1 img{
+	    width: 100px;
+	}
+	.no_internet1 p{
+		margin:0px 0 10px;
+	}
+	.no_internet1 .button-md-light, .no_internet1 .button-ios-light, .no_internet1 .button-default.activated {
+	    color: #fff;
+	    background-color: #9eaeb5;
+	    text-transform: capitalize;
+	    padding: 0 1.6rem;
+	    height: 2.6rem;
+	    font-size: 1rem;
+	}
+
+	.no_matches{
+	    text-align: center;
+	    padding: 50px 10px;
+	    color: #aaaaaa;
+	}
+	.no_matches p{
+		margin:0px;
+	}
+	.no_matches h5{
+		margin:0px 0px 5px;
+	}
+	.no_matches img{
+	    width: 75px;
+	}

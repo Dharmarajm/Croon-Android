@@ -1,0 +1,134 @@
+<ion-content>
+  <div class="stream" autofocus="true" *ngIf="!detailsScreenLoader">
+    <!-- <button ion-button icon-only clear (click)="closeModal()">
+      <ion-icon name="ios-close-circle" style="margin-top: 15px"></ion-icon>
+    </button> -->
+    <ion-fab top left (click)="closeModal()">
+     <button ion-fab mini><ion-icon name="ios-close-circle-outline"></ion-icon></button>
+    </ion-fab>
+    <video controls="controls" controlsList="nodownload" preload="auto" *ngIf="viewDetail?.file_type=='video'">
+        <source type="video/mp4" src="{{viewDetail?.path.url}}.mp4">
+        <source type="video/mov" src="{{viewDetail?.path.url}}.mp4"> 
+        <source type="video/ogg" src="{{viewDetail?.path.url}}.mp4">
+        <source type="video/x-matroska" src="{{viewDetail?.path.url}}.mp4">
+    </video>
+    
+    <div class="audio" *ngIf="viewDetail?.file_type=='audio'">
+    <!-- <ion-row>
+        <ion-col width="33"></ion-col>
+        <ion-col width="33">
+                <button  (click)="playAudio()" *ngIf="!currentTrack.playing" color="light" clear ion-button icon-only><ion-icon name="play-outline"></ion-icon></button>
+                
+                <button  (click)="playAudio()" *ngIf="currentTrack.playing" color="light" clear ion-button icon-only><ion-icon name="pause-outline"></ion-icon></button>
+        </ion-col>
+       <ion-col width="33"></ion-col>
+      </ion-row> -->
+      <img src="assets/imgs/music2.jpg">
+      <!-- <button  (click)="playAudio()" *ngIf="!currentTrack.playing" color="light" clear ion-button icon-only><ion-icon name="play-outline"></ion-icon></button><button  (click)="playAudio()" *ngIf="currentTrack.playing" color="light" clear ion-button icon-only><ion-icon name="pause-outline"></ion-icon></button> -->
+      <audio preload controls controlsList="nodownload">
+          <source type="audio/mp3" src="{{viewDetail?.path.url}}.wav">
+          <source type="audio/mpeg" src="{{viewDetail?.path.url}}.wav">
+          <source type="audio/wav" src="{{viewDetail?.path.url}}.wav">
+          <source type="audio/ogg" src="{{viewDetail?.path.url}}.wav">
+      </audio>
+    </div>
+  </div>
+  <div *ngIf="network_status == 2">
+  <div class="play_bg">
+    <div class="play_content" *ngIf="!detailsScreenLoader">
+      <span>
+        <h2>{{viewDetail?.title}}</h2>
+        <p><span><ion-icon name="ios-person-outline"></ion-icon>{{viewDetail?.user.first_name}}</span><span><ion-icon name="ios-star-outline"></ion-icon>{{viewDetail?.votes.length}} Votes</span><span><ion-icon name="ios-trophy-outline"></ion-icon>Rank {{user_rank}}</span></p>
+       <!--  <input type="checkbox" class="read-more-state" id="post-1" />
+        <p class="read-more-wrap"><span class="read-more-target">{{viewDetail?.description}}</span><label for="post-1" class="read-more-trigger"></label></p>
+        <label for="post-1" class="read-more-trigger"></label> -->
+        <!-- <p class="media_description">{{viewDetail?.description}}</p> -->
+      </span>
+
+      <p class="media_description" *ngIf="viewDetail?.description.length <=40 ">{{viewDetail?.description}}</p>
+      <p class="media_description" [ngClass]="{'text-success':readMore==true,'text-failure':readMore==false}" *ngIf="viewDetail?.description.length>40">{{viewDetail?.description}}</p>
+      <button (click)="read()" *ngIf="viewDetail?.description.length>40" class="read">Read {{text}}</button>
+
+      <span class="vote">
+      <div *ngIf="Page_status == 'Homepage' || Page_status == 'Uploadpage'">
+        <button ion-button icon-only clear (click)="updateVote()" [hidden]="voteClick">   
+          <ion-icon 
+            [name]="voteIcon ? 'ios-star' :'ios-star-outline'"  [ngClass]="{ 'noStar': voteIcon === false,'star': voteIcon === true }">
+          </ion-icon>
+          <p>Vote</p>
+        </button>
+        <button ion-button icon-only clear [hidden]="!voteClick">   
+          <ion-spinner name="bubbles"></ion-spinner>
+        </button>
+      </div>
+        <button ion-button icon-only (click)="regularShare(i)" clear>
+          <ion-icon name="md-share" ></ion-icon>
+          <p>Share</p>
+        </button>
+
+        <button ion-button icon-only (click)="reportPopUp()" clear *ngIf="userId!=viewDetail.user.id">
+          <ion-icon name="md-flag" ></ion-icon>
+          <p>Report</p>
+        </button>
+      </span>
+
+     <!--  <div class="vote1">
+        <button ion-button icon-only (click)="reportPopUp()" clear>
+          <ion-icon name="flag"></ion-icon>
+          <p>Report</p>
+        </button>
+      </div> -->
+    </div>
+   
+    <ion-item class="comment" (click)="disablecomment()" *ngIf="!commentsScreenLoader">
+      <ion-avatar item-start>
+        <img src="assets/imgs/dynm-img.png">
+      </ion-avatar>
+      <div class="input-comment">
+        <input type="text" name="" placeholder="Comment.." [(ngModel)]="Comments" [disabled]="userId ? null:''">
+        <button ion-button icon-only clear (click)="uploadCmts()" [disabled]="!Comments">
+          <ion-icon name="md-arrow-forward"></ion-icon>
+        </button>
+      </div>
+    </ion-item>
+    <ion-list inset class="user_list" *ngIf="!commentsScreenLoader">
+      <ion-item *ngFor="let user of setCmts">
+        <ion-avatar item-start>
+          <img src="assets/imgs/contactIcon.png" *ngIf="user.user.image.length==0 || user.user.image[0].image_path.url==null">
+          <img src="{{user.user.image[0].image_path.url}}" *ngIf="user.user.image.length!=0 && user.user.image[0].image_path.url!=null">
+        </ion-avatar>
+        <h2>{{user.message}}</h2>
+        <p>
+          <span><ion-icon name="ios-person-outline"></ion-icon>{{user.user.first_name}}</span>
+        </p>
+
+        
+        <ion-note item-end *ngIf="commants_date(user.updated_at) == user.updated_at">{{user.updated_at | date: 'HH:mm a'}}</ion-note>
+        <ion-note item-end *ngIf="commants_date(user.updated_at) != user.updated_at">{{user.updated_at | date: 'dd-MM-yyyy'}}</ion-note>
+        
+      </ion-item>
+    </ion-list>
+
+
+    <div *ngIf="infinite_count == 1">
+      <ion-infinite-scroll (ionInfinite)="doInfinite1($event)">
+        <ion-infinite-scroll-content loadingSpinner="bubbles" loadingText="Loading more data...">       
+        </ion-infinite-scroll-content>
+      </ion-infinite-scroll>
+    </div> 
+
+
+    <div class="no_matches" *ngIf="commentsScreenLoader || detailsScreenLoader">
+      <img src="assets/imgs/rotating-ring-loader.gif">
+    </div>   
+  </div>
+</div>
+<div class="no_internet1" *ngIf="network_status == 1">
+            <img src="assets/imgs/no_internet.png">
+            <h5>Oops!!</h5>
+            <p> Sorry, we can’t reach the server,<br> Please check your internet connection</p>
+            <button ion-button color="light" round item-end icon-start (click)="Network()">
+                <ion-icon name="refresh"></ion-icon> Try again
+            </button>
+</div>
+</ion-content>

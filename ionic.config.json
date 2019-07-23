@@ -1,0 +1,7 @@
+{
+  "name": "CROON-ANDROID",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "ionic-angular"
+}

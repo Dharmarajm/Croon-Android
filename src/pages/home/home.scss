@@ -1,0 +1,55 @@
+page-home {
+	ion-segment {
+	    display: block;
+	    white-space: nowrap;
+	    font-size: 0;
+	    overflow: auto;
+
+	    &::-webkit-scrollbar {
+	        width: 0;
+	        height: 0;
+	        display: none;
+	    }
+	    &::-moz-user-scrollbar{
+	        width: 0;
+	        height: 0;
+	        display: none;
+	    }
+	    ion-segment-button.segment-button {
+	        display: inline-block;
+	        min-width: 100px;
+	        width: auto !important;
+	    }
+	}
+	ion-slides {
+	    display: block;
+	    width: 100%;
+	    height: calc(100% - 96px);
+	}
+	.swiper-slide{
+		align-items:flex-start;
+		overflow:auto;
+	}
+
+	//css for slide
+    
+	div.swiper-container.swiper-container-horizontal{
+     margin-left: auto;
+     margin-right: auto;
+     padding: 0;
+     position: relative;
+     z-index: 1;
+     display: -ms-flexbox;
+     display: flex;
+     overflow: hidden;
+     width: 100%;
+     min-height: calc(100% - 96px);
+     height:auto;
+	}
+	.content-md .slide-zoom .slider-container {
+	    min-height: calc(100vh - 216px);
+	}
+	.content-ios .slide-zoom .slider-container {
+	    min-height: calc(100vh - 238px);
+	}
+}

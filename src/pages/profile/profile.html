@@ -1,0 +1,29 @@
+<ion-content class="ion-content-profile">
+  <div class="header">
+    <span>
+      <button ion-button icon-only clear (click)="back()" *ngIf="ShowBack==true">
+       <ion-icon name="ios-arrow-back"></ion-icon>
+      </button>
+      <h4 [ngClass]="{'text-success':ShowBack==false}">My Profile</h4>
+    </span>
+    <img src="assets/imgs/logo.png">
+  </div>
+  <div class="profile-pic">
+    <img src="{{imgPreview}}" *ngIf="user_image==null">
+    <img src="{{imgPreview}}" *ngIf="user_image!=null">
+      <button ion-button icon-only (click)="getPhoto()">
+       <ion-icon name="md-create"></ion-icon>
+      </button>
+  </div>
+  <div class="form-proceed">
+    <ion-item>
+      <ion-label floating>Name</ion-label>
+      <ion-input type="text" id="profile_name" [(ngModel)]="prof_name"></ion-input>
+    </ion-item>
+    <button ion-button block id="profile_proceed_button" [disabled]="!prof_name" (click)="dashboard()">
+      Proceed 
+      <ion-icon name="ios-arrow-forward"></ion-icon>
+    </button>
+  </div>
+</ion-content>
+

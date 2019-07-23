@@ -1,0 +1,6 @@
+<ion-tabs [selectedIndex]="myIndex">
+  <ion-tab [root]="tab1Root" tabTitle="Home" tabIcon="ios-home-outline" id="tabs_home"></ion-tab>
+  <ion-tab [root]="tab2Root" tabTitle="Upload" tabIcon="ios-log-out-outline" id="tabs_upload" (click)="upload()"></ion-tab>
+  <ion-tab [root]="tab3Root" tabTitle="My Votes" tabIcon="ios-star-outline" id="tabs_myvotes"></ion-tab>
+  <ion-tab [root]="tab4Root" tabTitle="History" tabIcon="ios-time-outline"  id="tabs_history"></ion-tab>
+</ion-tabs>

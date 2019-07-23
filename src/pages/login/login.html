@@ -1,0 +1,47 @@
+<ion-content class="ion-content">
+
+	<div class="images_logo">
+		<img src="assets/imgs/logo.png">
+	</div>
+	<form class="login-form">
+		  <ion-item>
+		    <ion-label floating>Email</ion-label>
+		    <ion-input type="email" id="login_email" #myInput [(ngModel)]="login.emailid" [ngModelOptions]="{standalone: true}"></ion-input>
+		  </ion-item>
+
+		  <ion-item>
+		    <ion-label floating>Password</ion-label>
+		    <ion-input type="password" id="login_password" [(ngModel)]="login.password" [ngModelOptions]="{standalone: true}"></ion-input>
+		  </ion-item>
+	  
+	   
+	   <ion-item>
+		  <ion-label (click)="rememberme()">Remember Me</ion-label>
+		  <ion-checkbox (click)="rememberme()" [(ngModel)]="check" (change)="check = !check" [ngModelOptions]="{standalone: true}"></ion-checkbox>
+		</ion-item>
+
+
+	   <div class="login-btn">
+			<button ion-button block id="login_later" (click)="cancel()">Later</button>
+			<button ion-button block id="login_button" (click)="doLogin()">Login</button>
+	   </div>
+	    <div class="forgot">
+	    	<button ion-button clear id="forgot_button" (click)="forgotpassword()">FORGOT PASSWORD?</button>
+	    </div>
+	    <div class="login-with">
+	    	<label>Login with</label>
+	    	<div class="social-login">
+				<button ion-button icon-only id="login_with_facebook" (click)="loginfb()">
+					<i class="ti ti-facebook"></i>
+				</button>
+				<button ion-button icon-only id="login_with_google" (click)="logingoogle()">
+					<i class="ti ti-google"></i>
+				</button>
+	    	</div>
+	    </div>
+         <div class="register">
+			<h5>Not a Crooner yet? <a id="signup_page" (click)="signup()">Sign up</a></h5>
+         </div>
+	</form>
+	
+</ion-content>

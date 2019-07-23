@@ -1,0 +1,89 @@
+page-history {
+	.subheader h3 span{
+		font-size: 1.3rem;
+		font-weight:900;
+		color:#002b3d;
+		padding:10px;
+		background-color:#f1f4f5;
+		margin-left:5px;
+		border-radius:1px;
+	}
+	.button-group {
+	    padding: 10px;
+	    text-align: center;
+	    margin-bottom: 5px;
+	}
+	.button-group button {
+		min-width:75px;
+	    border-radius: 6px;
+	    height: 35px;
+	    font-size: 1.3rem;
+	    text-transform: uppercase;
+	    font-weight: 600;
+	}
+	.button-group button:first-child ion-icon{
+		margin:0 8px 0 0;
+		font-size:14px;
+	}
+	.button-group button:last-child ion-icon{
+		margin:0 0 0 8px;
+		font-size:14px;
+	}
+	.button-group button.activated{
+		background-color: #fccb2b;
+		color:#002b3d;
+	}
+	ion-segment {
+	    display: block;
+	    white-space: nowrap;
+	    font-size: 0;
+	    overflow: auto;
+
+	    &::-webkit-scrollbar {
+	        width: 0;
+	        height: 0;
+	        display: none;
+	    }
+	    &::-moz-user-scrollbar{
+	        width: 0;
+	        height: 0;
+	        display: none;
+	    }
+	    ion-segment-button.segment-button {
+	        display: inline-block;
+	        min-width: 100px;
+	        width: auto !important;
+	    }
+	}
+	ion-slides {
+	    display: block;
+	    width: 100%;
+	    height: calc(100% - 162px);
+	}
+	.swiper-slide{
+		align-items:flex-start;
+		overflow:auto;
+	}
+
+	//css for slide
+    
+	div.swiper-container.swiper-container-horizontal{
+     margin-left: auto;
+     margin-right: auto;
+     padding: 0;
+     position: relative;
+     z-index: 1;
+     display: -ms-flexbox;
+     display: flex;
+     overflow: hidden;
+     width: 100%;
+     height:auto;
+	}
+	.content-md .slide-zoom .slider-container {
+	    min-height: calc(100vh - 284px);
+	}
+	.content-ios .slide-zoom .slider-container {
+	    min-height: calc(100vh - 306px);
+	}
+}
+    

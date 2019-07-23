@@ -1,0 +1,51 @@
+<ion-menu [content]="content"> 
+  <ion-content>
+    <button ion-item menuClose class="menu-login"  *ngIf="user_id == null" (click)="openPage(pages[3])">
+      <h2>Log In To Your Croon Account</h2>
+      <p>Sync Your Profile Across The Device</p>
+      <ion-icon name="ios-arrow-forward" item-end></ion-icon>
+    </button>
+
+    <div class="menu-profile-pic" *ngIf="user_id > 0">
+      <img src="assets/imgs/profileIcon.jpg" *ngIf="user_image==null || user_image=='null'">
+      <img src="{{user_image}}" *ngIf="user_image!=null && user_image!=undefined || user_image!='null' && user_image!=undefined">
+      <h4 *ngIf="user_name!='null' || user_name!=null">{{user_name}}</h4>
+    </div>
+    <ion-item-group *ngIf="user_id > 0">
+      <ion-item-divider color="light">Statistics</ion-item-divider>
+      <button ion-item menuClose (click)="goto_myupload()">
+          <ion-icon name="ios-log-out-outline"></ion-icon>
+          Total Uploads
+      </button>
+    </ion-item-group>
+    <ion-item-group>
+      <ion-item-divider color="light">Other</ion-item-divider>
+     
+      <button ion-item menuClose (click)="openPage(pages[0])">
+          <ion-icon name="ios-home-outline"></ion-icon>
+          Home
+      </button>
+     <button ion-item menuClose (click)="openPage(pages[2])">
+          <ion-icon name="ios-information-circle-outline"></ion-icon>
+          About
+      </button>
+
+      <button ion-item menuClose *ngIf="user_id > 0" (click)="openPage(pages[6])">
+          <ion-icon name="ios-contact-outline"></ion-icon>
+         Profile
+      </button> 
+
+       <button ion-item menuClose *ngIf="user_id > 0" (click)="openPage(pages[5])">
+          <ion-icon name="ios-unlock-outline"></ion-icon>
+         Change Password
+      </button>
+
+      <button ion-item menuClose *ngIf="user_id > 0" (click)="openPage(pages[4])">
+          <ion-icon name="ios-power"></ion-icon>
+         Logout
+      </button>
+    </ion-item-group>
+  </ion-content>
+</ion-menu>
+ 
+<ion-nav [root]="rootPage" #content swipeBackEnabled="false"></ion-nav>

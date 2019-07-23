@@ -1,0 +1,107 @@
+{
+  "prepare_queue": {
+    "installed": [],
+    "uninstalled": []
+  },
+  "config_munge": {
+    "files": {}
+  },
+  "installed_plugins": {
+    "com-badrit-base64": {
+      "PACKAGE_NAME": "com.ionic.croon_android"
+    },
+    "cordova-plugin-android-permissions": {
+      "PACKAGE_NAME": "com.ionic.croon_android"
+    },
+    "cordova-plugin-device": {
+      "PACKAGE_NAME": "com.ionic.croon_android"
+    },
+    "cordova-plugin-facebook4": {
+      "APP_ID": "858077674402965",
+      "APP_NAME": "Croon",
+      "ANDROID_SDK_VERSION": "4.+",
+      "PACKAGE_NAME": "com.ionic.croon_android"
+    },
+    "cordova-plugin-file": {
+      "PACKAGE_NAME": "com.ionic.croon_android"
+    },
+    "cordova-plugin-file-transfer": {
+      "PACKAGE_NAME": "com.ionic.croon_android"
+    },
+    "cordova-plugin-filechooser": {
+      "PACKAGE_NAME": "com.ionic.croon_android"
+    },
+    "cordova-plugin-filepath": {
+      "PACKAGE_NAME": "com.ionic.croon_android"
+    },
+    "cordova-plugin-googleplus": {
+      "PACKAGE_NAME": "com.ionic.croon_android"
+    },
+    "cordova-plugin-ionic-keyboard": {
+      "PACKAGE_NAME": "com.ionic.croon_android"
+    },
+    "cordova-plugin-ionic-webview": {
+      "PACKAGE_NAME": "com.ionic.croon_android"
+    },
+    "cordova-plugin-media": {
+      "PACKAGE_NAME": "com.ionic.croon_android"
+    },
+    "cordova-plugin-media-capture": {
+      "PACKAGE_NAME": "com.ionic.croon_android"
+    },
+    "cordova-plugin-network-information": {
+      "PACKAGE_NAME": "com.ionic.croon_android"
+    },
+    "cordova-plugin-splashscreen": {
+      "PACKAGE_NAME": "com.ionic.croon_android"
+    },
+    "cordova-plugin-statusbar": {
+      "PACKAGE_NAME": "com.ionic.croon_android"
+    },
+    "cordova-plugin-streaming-media": {
+      "PACKAGE_NAME": "com.ionic.croon_android"
+    },
+    "cordova-plugin-telerik-imagepicker": {
+      "PACKAGE_NAME": "com.ionic.croon_android"
+    },
+    "cordova-plugin-video-editor": {
+      "PACKAGE_NAME": "com.ionic.croon_android"
+    },
+    "cordova-plugin-whitelist": {
+      "PACKAGE_NAME": "com.ionic.croon_android"
+    },
+    "cordova-plugin-x-socialsharing": {
+      "PACKAGE_NAME": "com.ionic.croon_android"
+    },
+    "cordova-plugin-x-toast": {
+      "PACKAGE_NAME": "com.ionic.croon_android"
+    },
+    "ionic-plugin-deeplinks": {
+      "URL_SCHEME": "croon",
+      "DEEPLINK_SCHEME": "https",
+      "DEEPLINK_HOST": "com.ionic.croon_android",
+      "ANDROID_PATH_PREFIX": "/",
+      "ANDROID_2_PATH_PREFIX": "/",
+      "ANDROID_3_PATH_PREFIX": "/",
+      "ANDROID_4_PATH_PREFIX": "/",
+      "ANDROID_5_PATH_PREFIX": "/",
+      "DEEPLINK_2_SCHEME": " ",
+      "DEEPLINK_2_HOST": " ",
+      "DEEPLINK_3_SCHEME": " ",
+      "DEEPLINK_3_HOST": " ",
+      "DEEPLINK_4_SCHEME": " ",
+      "DEEPLINK_4_HOST": " ",
+      "DEEPLINK_5_SCHEME": " ",
+      "DEEPLINK_5_HOST": " ",
+      "PACKAGE_NAME": "com.ionic.croon_android"
+    },
+    "onesignal-cordova-plugin": {
+      "PACKAGE_NAME": "com.ionic.croon_android"
+    }
+  },
+  "dependent_plugins": {
+    "es6-promise-plugin": {
+      "PACKAGE_NAME": "com.ionic.croon_android"
+    }
+  }
+}

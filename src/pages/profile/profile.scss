@@ -1,0 +1,91 @@
+page-profile {
+	.ion-content-profile {
+	    background: url("../assets/imgs/bg.jpg") no-repeat center center fixed; 	   
+     }
+     .header{
+     	display:flex;
+     	align-items:center;
+     	justify-content:space-between;
+     	padding:30px 20px 30px 8px;
+     }
+     .header span{
+     	display:inline-flex;
+     	align-items:center;
+     }
+     .header span h4{
+     	margin:0px;
+     	color:#fff;
+     	font-weight:300;
+     }
+     .header span .button-clear{
+     	color:#fff;
+     }
+     .header img{
+     	width:100px;
+     }
+     .profile-pic{
+     	text-align: center;
+     	position:relative;
+		margin: 0 auto;
+		width: 200px;
+     }
+     .profile-pic img{
+	    border-radius: 50%;
+	    height: 160px;
+	    width: 160px;
+	    border: 4px solid #0f5466;
+	    object-fit: cover;
+     }
+     .profile-pic .button-default{
+     	position:absolute;
+	    top: 10px;
+	    right: 20px;
+	    background-color: #fccc2c;
+	    color: #002b3d;
+	    border-radius: 50%;
+	    font-size: 10px;
+	    height: 3rem;
+	    width: 3rem;
+     }
+	.profile-pic .button-default.activated, .profile-pic .button-default:hover, .profile-pic .button-default:hover:not(.disable-hover){
+		background-color: #fccc2c;
+	}
+	.item-input-has-focus .label-md[floating], .input-has-focus .label-md[floating], .item-input-has-focus .label-ios[floating], .input-has-focus .label-ios[floating] {
+	    color: #fdc629;
+	}
+	.item-md.item-input.item-input-has-focus .item-inner, .item-md.item-input.input-has-focus .item-inner, .item-ios.item-input.item-input-has-focus .item-inner, .item-ios.item-input.input-has-focus .item-inner {
+	    border-bottom-color: #fdc629;
+	    -webkit-box-shadow: inset 0 -1px 0 0 #fdc629;
+	    box-shadow: inset 0 -1px 0 0 #fdc629;
+	}
+	.item-input {
+	    padding-left: 0px;
+	    color: #fff;
+	    background-color: transparent;
+	    font-size: 16px;
+	    font-weight: 300;
+	}
+	.button-default {
+	    background-color: #0c5466;
+	    font-weight: 500;
+	    letter-spacing: 1px;
+	    border-radius: 8px;
+	    height: 4.2rem;
+	}
+	.button-default.activated,.button-default:hover, .button-default:hover:not(.disable-hover){
+		background-color: #0c5466;
+	}
+	.form-proceed{
+		padding:0 35px;
+	}
+	.form-proceed button{
+		margin-top:35px;
+	}
+	.form-proceed button ion-icon{
+		margin-left:10px;
+	}
+	.header span h4.text-success{
+       margin-left:20px !important;
+	}
+
+}

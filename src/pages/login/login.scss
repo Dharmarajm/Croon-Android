@@ -1,0 +1,132 @@
+page-login {
+	.ion-content {
+	    background: url("../assets/imgs/bg.jpg") no-repeat center center fixed; 	  
+     }
+    .images_logo{
+    	text-align:center;
+    	padding: 40px 75px 0px;
+    }
+    .images_logo button{
+    	position:absolute;
+    	top:20px;
+    	right:0px;
+    }
+	.item-input-has-focus .label-md[floating], .input-has-focus .label-md[floating], .item-input-has-focus .label-ios[floating], .input-has-focus .label-ios[floating] {
+	    color: #fdc629;
+	}
+	.item-md.item-input.item-input-has-focus .item-inner, .item-md.item-input.input-has-focus .item-inner, .item-ios.item-input.item-input-has-focus .item-inner, .item-ios.item-input.input-has-focus .item-inner {
+	    border-bottom-color: #fdc629;
+	    -webkit-box-shadow: inset 0 -1px 0 0 #fdc629;
+	    box-shadow: inset 0 -1px 0 0 #fdc629;
+	}
+	.item-md.item-input.ng-valid.item-input-has-value:not(.input-has-focus):not(.item-input-has-focus) .item-inner, .item-md.item-input.ng-valid.input-has-value:not(.input-has-focus):not(.item-input-has-focus) .item-inner, .item-ios.item-input.ng-valid.item-input-has-value:not(.input-has-focus):not(.item-input-has-focus) .item-inner, .item-ios.item-input.ng-valid.input-has-value:not(.input-has-focus):not(.item-input-has-focus) .item-inner {
+	    border-bottom-color: #fcc62b;
+	    -webkit-box-shadow: inset 0 -1px 0 0 #fdc629;
+	    box-shadow: inset 0 -1px 0 0 #fcc62b;
+	}
+	.item-input {
+	    padding-left: 0px;
+	    color: #fff;
+	    background-color: transparent;
+	    font-size: 16px;
+	    font-weight: 300;
+	}
+	.item-block .item-inner {
+	    border-bottom: 1px solid #f0efef;
+	}	
+	.login-form {
+	    padding: 0px 35px;
+	}
+	.item-checkbox .item-inner {
+	    border-bottom: none !important;
+	}
+	.checkbox-md .checkbox-icon, .checkbox-ios .checkbox-icon {
+	    border-radius: 1px;
+	    border-color: #cccccb;
+	    background-color: transparent;
+	}
+	.item.item-checkbox{
+	    font-size: 14px;
+	    font-weight: 300;
+	    color: #c7c9cd;
+	    padding: 10px 0;
+	    background-color: transparent;
+	}
+	.item .checkbox-md , .item .checkbox-ios {
+	    margin: 9px 10px 9px 4px !important;
+	}
+	.checkbox-md .checkbox-checked .checkbox-inner, .checkbox-ios .checkbox-checked .checkbox-inner {
+	    border-color: #fdc629;
+	}
+	.button-default {
+	    background-color: #0c5466;
+	    font-weight: 500;
+	    letter-spacing: 1px;
+	    border-radius: 8px;
+	    height: 4.2rem;
+	}
+	.button-default.activated, .button-default:hover:not(.disable-hover){
+		background-color: #0c5466;
+	}
+	.forgot {
+	    border-bottom: 1px solid #666766;
+	    padding: 10px 0 0;
+	    text-align: center;
+	}
+	.button-clear-md, .button-clear-ios{
+	 	color: #c7c9cd;
+	 	font-weight: 300;
+	}
+	.login-with{
+		text-align: center;
+		padding:10px;
+	}
+	.login-with label{
+	    font-size: 16px;
+	    font-weight: 400;
+	    color: #f3f3f4;
+	}
+	.social-login{
+		margin: 1.5rem 0;
+	}
+	.social-login .button-default{
+		border-radius: 50%;
+		height:30px;
+		width:30px;
+		margin:0 5px;
+	}
+	.social-login .button-default:first-child{
+		background-color:#3c5a9a;
+	}
+	.social-login .button-default:last-child{
+		background-color:#dd4b38;
+	}
+	.register {
+	    margin: 0 -35px;
+	    padding: 1px 35px;
+	    background-color: #002b3d;
+	}
+	.register h5{
+	    font-size: 16px;
+	    font-weight: 300;
+	    color: #b0aeae;
+	    text-align: center;
+	    margin: 10px 0;
+	}
+	.register h5 a{
+		color:#fcc82b;
+	}
+	.login-btn{
+		display: flex;
+	    margin: 0 -5px;
+	}
+	.login-btn button{
+	    margin: 0 5px;
+	}
+	.login-btn button:last-child{
+		background-color: #fcc62b;
+	    color: #002b3d;
+	}
+}
+
+ 

@@ -1,0 +1,62 @@
+<ion-header>
+   <ion-toolbar color="dark-blue">
+      <div class="searchgroup">
+        <button ion-button clear icon-only (click)="cancelSearch()">
+          <ion-icon name='arrow-back'></ion-icon>
+        </button>
+        <ion-input #myInput [(ngModel)]="someValue"  (ngModelChange)="keywords_list()"  (keyup.enter)="onEnter($event)"  type="text" class="searchinput" placeholder="Search"></ion-input> 
+      </div>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+<div *ngIf="display_details == 1">
+  <ion-list>
+    <div class="user_list search_list" *ngFor="let sk of Search_keywords">
+      <button ion-item (click)="keywords_details(sk)">
+        <h2>
+          {{sk}}
+          <ion-icon name='search'></ion-icon>
+        </h2>
+      </button> 
+    </div>
+  </ion-list>
+</div>
+
+<div *ngIf="display_details == 2">
+  <ion-list>
+    <div class="user_list" *ngFor="let user of SearchOrder">
+      <button ion-item (click)="openModal(user.id,user.rank)">
+        <ion-avatar item-start>
+          <img src="assets/imgs/contactIcon.png" *ngIf="user.user.image.length==0 || user.user.image[0].image_path.url==null">
+          <img src="{{global.imageUrl}}{{user.user.image[0].image_path.url}}" *ngIf="user.user.image.length!=0 && user.user.image[0].image_path.url!=null">
+        </ion-avatar>
+        <h2>{{user.title}}</h2>
+        <p><span><ion-icon name="ios-person-outline"></ion-icon>{{user.user.first_name}}</span><span><ion-icon name="ios-star-outline"></ion-icon>{{user.votes.length}} votes</span><span><ion-icon name="ios-trophy-outline"></ion-icon>Rank {{user.rank}}</span></p>
+      </button> 
+    </div>
+  </ion-list>
+</div>
+
+<div *ngIf="display_details == 3">
+    <div class="no_matches" *ngIf="SearchOrder.length == 0 && network_status == 2">
+      <img src="assets/imgs/no_matches.png">
+      <h5>No matches found</h5>
+      <p>please try searching with another term</p>
+    </div>
+</div>    
+
+<div class="find_favourite" *ngIf="display_details == 0 && network_status == 2">
+    <img src="assets/imgs/find.png">
+    <h5>Find your favourite</h5>
+    <p>Search for music, video, etc.,</p>
+</div>
+
+<div class="no_internet1" *ngIf="network_status == 1">
+    <img src="assets/imgs/no_internet.png">
+    <h5>Oops!!</h5>
+    <p> Sorry, we can’t reach the server,<br> Please check your internet connection</p>
+</div>
+
+</ion-content>

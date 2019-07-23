@@ -1,0 +1,52 @@
+<style type="text/css">
+  .about{
+    text-align: justify;
+    margin-bottom: 5px;
+    margin-right: 10px;
+  }
+</style>
+
+<ion-header>
+  <ion-toolbar color="dark-blue">
+    <span>
+      <button menuToggle ion-button icon-only clear>
+        <ion-icon name="md-menu"></ion-icon>
+      </button>
+    </span>
+    <img src="assets/imgs/header-logo.png">
+    <span>
+      <button ion-button icon-only  (click)="notification()" clear>
+        <ion-icon name="ios-notifications-outline"></ion-icon>
+        <span class="notify" *ngIf="notify_count!=0" [hidden]="notify_count==undefined">{{notify_count}}</span>
+      </button>     
+    </span>
+  </ion-toolbar>
+</ion-header>
+
+
+
+<ion-content id="about_details">
+<ul>
+  <li class="about">
+      Croon is a weekly competition app where people can upload or record audio/video clips (up to a minute long) of them singing, dancing, performing sports tricks or playing video game, etc.
+  </li>
+  <li class="about">
+      Competitions will be a week long and contestants can upload as many videos or audio clips as they want in all genres until a specified time.
+  </li>
+  <li class="about">
+      Once uploaded, contestants can share their uploads with all their friends and invite them to vote.
+  </li>
+  <li class="about">
+      Registered users will be given an opportunity to vote (up to one vote per upload) for all their favorite uploads.
+  </li>
+  <li class="about">
+      Contestants will be judged by other users based on the number of votes he/she gets. And the winners will be announced (for each genre) at the end of the week.
+  </li>
+  <li class="about">
+      Croon will send daily updates on the current vote tally to all the registered users, contestants and voters.
+  </li>
+  <li class="about">
+      If you want to watch your all time favorite uploads, Croon's history will have the past winners and uploads.
+  </li>
+</ul>
+</ion-content>

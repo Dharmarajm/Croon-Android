@@ -1,0 +1,4 @@
+{"id":105,"first_name":"Croon Man","last_name":null,"mobile_no":null,"email_id":"crooncontest@gmail.com","password":null,"status":null,"user_type":null,"created_at":"2018-07-31T11:53:59.685Z","updated_at":"2018-07-31T11:53:59.685Z","login_status":"facebook","image":[{"id":47,"image_path":{"url":null},"user_id":105,"created_at":"2018-07-31T11:53:59.718Z","updated_at":"2018-07-31T11:53:59.718Z"}]}
+
+
+{"id":104,"first_name":"altius redmine","last_name":null,"mobile_no":null,"email_id":"altius.redmine@gmail.com","password":null,"status":null,"user_type":null,"created_at":"2018-07-31T07:44:33.017Z","updated_at":"2018-07-31T07:44:33.017Z","login_status":"google","image":[{"id":46,"image_path":{"url":null},"user_id":104,"created_at":"2018-07-31T07:44:33.072Z","updated_at":"2018-07-31T07:44:33.072Z"}]}
